@@ -1,0 +1,278 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.center {
+  display: flex;
+  max-width: 100%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.logo-container {
+  margin-top: 5px;
+  display: flex;
+}
+
+.wrapper-header {
+  padding: 40px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.noticias {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.noticias img {
+  width: 30%;
+  height: auto;
+  
+}
+/* Seção de Notícias */
+.noticias-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 2%;
+}
+
+.noticias-container h2 {
+  font-size: 28px;
+  color: rgb;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.noticias-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.noticia-card {
+  background-color: rgb(255, 255, 255, 0.05);
+  min-height: 450px;
+  width: 30%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.noticia-card:hover {
+  transform: scale(1.03);
+}
+
+.noticia-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.noticia-card h3 {
+  color: #4176e1;
+  font-size: 18px;
+  margin: 10px;
+}
+
+.noticia-card p {
+  font-size: 14px;
+  color: #333;
+  margin: 10px;
+  flex-grow: 1;
+}
+
+.btn-leia {
+  display: block;
+  text-align: center;
+  background-color: #4176e1;
+  color: rgba(255, 255, 255, 0.959);
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 0 0 10px 10px;
+}
+
+.btn-leia:hover {
+  background-color: dodgerblue;
+}
+
+/* Rodapé */
+footer {
+  background-color: #4176e1;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+
+/*Tamanho, largura e cor da barra lateral*/
+nav.menu{
+    width: 60px;
+    height: 100%;
+    background-color: #4176e1;
+/*Deixa o menu fixo*/
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    overflow: hidden;
+    transition: .3s;
+    z-index: 1001;
+}
+
+nav.menu:hover{
+    width: 300px;
+}
+
+.expandir{   
+    width: 100%;
+    padding-left: 10px;
+}
+
+ul{
+    height: 100%;
+    list-style-type: none;
+}
+
+/*Cor, estilo e alinhamento dos nomes e icones da barra lateral*/
+ul li.item a{
+    color:snow;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 50px;
+} 
+
+/*Distancia do icone do nome*/
+ul li.item a .link{
+    margin-left: 40px;
+}
+
+/*Tamanho do icone*/
+ul li.item a .icon > i{
+    font-size: 30px;
+}
+
+/*background de cor quando passa o mouse*/
+ul li.item:hover{
+    background-color: blue;
+}
+
+ul li.item{
+    transition: .3s;
+}
+
+.relogio-canto {
+  position:absolute; /* Fixa o elemento na janela de visualização */
+  top: 15px; /* Distância do topo */
+  right: 10px; /* Distância da direita */
+  font-family: Arial, sans-serif; /* Opcional: define a fonte */
+  font-size: 0.8em; /* Opcional: aumenta o tamanho da fonte */
+  color: black; /* Opcional: muda a cor do texto */
+  background-color: #0e000009; /* Opcional: adiciona um fundo */
+  padding: 5px 10px; /* Opcional: adiciona espaçamento interno */
+  border-radius: 5px; /* Opcional: arredonda as bordas */
+  z-index: 1000; /* Opcional: garante que fique acima de outros elementos */
+}
+
+/* Estilos do Carrossel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 400px; /* Ajuste a altura conforme sua necessidade */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 20px 50px;
+}
+
+.slide-content {
+    /* Fundo escuro semi-transparente para o bloco de texto */
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 15px; 
+    border-radius: 8px;
+    /* Garante que o texto dentro seja branco */
+    color: whitesmoke; 
+    width: 100%; /* Ocupa a largura total para o padding */
+}
+
+.slide-content h2, .slide-content p {
+    background-color: transparent;
+    padding: 0;
+    margin: 5px 0;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+    border-radius: 0 50px 50px 0;
+}
+
+.carousel-btn.next {
+    right: 10px;
+    border-radius: 50px 0 0 50px;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.indicator.active {
+    background-color: white;
+}

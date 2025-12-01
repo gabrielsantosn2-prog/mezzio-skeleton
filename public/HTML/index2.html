@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticiando PE</title>
+    <link rel="shortcut icon" href="./IMG/icone grande sem fundo.png" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="/HTML/script.js">
+</head>
+
+
+<body>
+    <script>
+        if (sessionStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = "Login.html";
+        }
+    </script>
+    <header>
+        <div class="center">
+            <p id="relogio" class="relogio-canto"></p>
+
+
+
+            <hr>
+            <script src="script.js"></script>
+
+        </div>
+        <div class="wrapper-header">
+            <div id="inicio" class="logo-container">
+                <img src="IMG/imagem logo 2.png" alt="" width="200" height="200">
+            </div>
+
+        </div>
+        </div>
+        <hr>
+    </header>
+    <nav class="menu">
+
+        <div class="expandir">
+
+            <ul>
+                <li class="item">
+                    <a href="#inicio">
+                        <span class="icon"><i class="bi bi-house-fill"></i></i></span>
+                        <span class="link">Início</span>
+
+
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#noticias">
+                        <span class="icon"><i class="bi bi-newspaper"></i></span>
+                        <span class="link">Noticias</span>
+
+
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#rodape">
+                        <span class="icon"><i class="bi bi-telephone-fill"></i></span>
+                        <span class="link">Contato</span>
+
+                        
+                <li class="item">
+                    <a href="#" onclick="doLogoff(event)">
+                        <span class="icon"><i class="bi bi-person-fill-dash"></i></span>
+                        <span class="link">Logoff</span>
+
+
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    </div>
+    <main class="noticias-container">
+        <h2>Novidades</h2>
+        <br>
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <div class="slide" style="background-image: url('IMG/carrossel_img/sport-posse-2.webp');">
+                    <div class="slide-content">
+                        <h2>Bastidores: costura política avança em busca de um acordo para saída do presidente Yuri
+                            Romão do Sport</h2>
+                        <p>Mandatário rubro-negro se reuniu, nesta segunda-feira, com ex-presidente Luciano Bivar; uma
+                            nova rodada de conversas, com Gustavo Dubeux, está marcada; Yuri nega considerar saída</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('IMG/carrossel_img/operacao-papai-noel.avif');">
+                    <div class="slide-content">
+                        <h2>Comércio do Centro do Recife abre todos os dias até o fim do ano e terá reforço policial
+                            durante período</h2>
+                        <p>Funcionamento diário começa neste sábado (15), feriado da Proclamação da República. Operação
+                            Papai Noel 2025 terá mais de 2,5 mil policiais.</p>
+                    </div>
+                </div>
+                <div class="slide"
+                    style="background-image: url('IMG/carrossel_img/afp-20251115-846d9ev-v1-midres-fblsenbrafriendly.jpg');">
+                    <div class="slide-content">
+                        <h2>Brasil vence com facilidade, derruba invencibilidade de Senegal e acha formação ideal</h2>
+                        <p>A apresentação indica que Ancelotti encontrou uma formação titular. Ou ao menos está perto
+                            disso.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button id="prevBtn" class="carousel-btn prev">&#10094;</button>
+            <button id="nextBtn" class="carousel-btn next">&#10095;</button>
+
+            <div class="carousel-indicators">
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+            </div>
+        </div>
+        <hr>
+        <br> <br> <br>
+        <h2>Ultimas Noticias</h2>
+        <br> <br>
+
+
+        <div id="noticias" class="noticias-grid">
+            <div class="noticia-card">
+                <img src="IMG/IMG-noticias/ti-joana-bezerra.avif" alt="metro do recife">
+                <h3>Greve do Metrô do Recife fecha todas as 36 estações; linhas de ônibus recebem reforço</h3>
+                <p>Todas as 36 estações do Metrô do Recife estão fechadas a partir desta segunda-feira (3), com o início
+                    da greve dos metroviários (veja vídeo acima). Por causa da paralisação do serviço, cerca de 170 mil
+                    passageiros precisam buscar alternativas para se deslocar na Região Metropolitana. Ônibus foram
+                    reforçados, com circulação de linhas especiais.</p>
+                <a href="https://g1.globo.com/pe/pernambuco/noticia/2025/11/03/greve-do-metro-do-recife-fecha-todas-as-estacoes-linhas-de-onibus-recebem-reforco.ghtml"
+                    class="btn-leia">Ler mais</a>
+            </div>
+
+            <div class="noticia-card">
+                <img src="IMG/IMG-noticias/img_6845.webp" alt="Recife Antigo">
+                <h3>Recife Antigo ganha novo centro cultural</h3>
+                <p>A Zona Sul do Recife se prepara para receber um novo e sofisticado centro cultural dedicado à
+                    cultura, gastronomia e ao desenvolvimento humano. O Centro Cultural Instituto Marcos Hacker de Melo
+                    (Instituto MHM) será inaugurado no próximo dia 29 de junho, às 17h, em um prédio recém-construído na
+                    Avenida Domingos Ferreira, esquina com a Rua Tenente João Cícero, nº 258, no coração de Boa Viagem,
+                    nas proximidades de colégios, serviços e um dos principais corredores de circulação da cidade.</p>
+                <a href="https://falape.com/recife-ganha-novo-centro-cultural-com-curadoria-e-mostras-do-mis-de-sao-paulo-em-boa-viagem-alem-de-teatro-bistro-restaurante-e-rooftop"
+                    class="btn-leia">Ler mais</a>
+            </div>
+
+            <div class="noticia-card">
+                <img src="IMG/IMG-noticias/1_image__72_-787822.jpg"
+                    alt="Prefeitura do Recife anuncia homenageados do Carnaval 2026: Lenine, Carmen Virgínia e o Bloco Madeira do Rosarinho">
+                <h3>Prefeitura do Recife anuncia homenageados do Carnaval 2026: Lenine, Carmen Virgínia e o Bloco
+                    Madeira do Rosarinho.</h3>
+                <p>O Carnaval do Recife de 2026 já tem seus homenageados definidos. A Prefeitura anunciou que o cantor
+                    Lenine, a iabassê Carmen Virgínia e o tradicional Bloco Carnavalesco Misto Madeira do Rosarinho, que
+                    completa 100 anos no próximo ano, serão os grandes reverenciados da festa que celebra a cultura e a
+                    identidade recifense.</p>
+                <a href="noticia.html" class="btn-leia">Ler mais</a>
+            </div>
+            <div class="noticia-card">
+                <img src="IMG/IMG-noticias/whatsapp-image-2025-07-09-at-222955.jpg"
+                    alt="Fim da linha: Sport anuncia saída de Daniel Paulista">
+                <h3>Fim da linha: Sport anuncia saída de Daniel Paulista</h3>
+                <p>Após uma temporada difícil, o treinador não é mais o comandante da equipe...</p>
+                <a href="noticia.html" class="btn-leia">Ler mais</a>
+            </div>
+            <div class="noticia-card">
+                <img src="IMG/IMG-noticias/whatsapp-image-2025-10-28-at-133232.jpg"
+                    alt="Homem da Meia-Noite anuncia tema do desfile e homenageados para o Carnaval de 2026; confira">
+                <h3>Homem da Meia-Noite anuncia tema do desfile e homenageados para o Carnaval de 2026; confira</h3>
+                <p>O famoso bloco de carnaval revelou suas novidades para a próxima folia...</p>
+                <a href="noticia.html" class="btn-leia">Ler mais</a>
+            </div>
+            <div class="noticia-card">
+                <img src="IMG/IMG-noticias/img-3347.jpg"
+                    alt="Recife regulamenta uso e armazenamento de armas de fogo da Guarda Civil; entenda o decreto">
+                <h3>O Recife regulamenta a utilização e o armazenamento de armas de fogo funcionais por guardas civis
+                    municipais. </h3>
+                <p>O decreto nº 39.173 foi publicado no Diário Oficial da cidade do último sábado (25) e está em vigor
+                    desde então.</p>
+                <a href="https://www.folhape.com.br/noticias/recife-regulamenta-uso-e-armazenamento-de-armas-de-fogo-da-guarda/446744/"
+                    class="btn-leia">Ler mais</a>
+            </div>
+            <div class="noticia-card">
+                <img src="IMG/IMG-noticias/copia-de-fotos-enquadramento-capa.jpg"
+                    alt="Datafolha aponta Raquel Lyra e João Campos empatados na preferência espontânea para o Governo de PE">
+                <h3>Datafolha aponta Raquel Lyra e João Campos empatados na preferência espontânea para o Governo de PE
+                </h3>
+                <p>Levantamento foi realizado entre os dias 20 e 22 de outubro e ouviu 1.200 eleitores.</p>
+                <a href="noticia.html" class="btn-leia">Ler mais</a>
+            </div>
+            <div class="noticia-card">
+                <img src="IMG/IMG-noticias/1_cxuotyuwqaacbdr-787540.jpg"
+                    alt="Recuperação judicial: confira quem são os principais credores do Santa Cruz">
+                <h3>Recuperação judicial: confira quem são os principais credores do Santa Cruz</h3>
+                <p>Ex-jogadores e ex-dirigente lideram lista de credores do Santa Cruz na recuperação judicial</p>
+                <a href="noticia.html" class="btn-leia">Ler mais</a>
+            </div>
+            <div class="noticia-card">
+                <img src="IMG/IMG-noticias/13092025rv060-772179.jpg" alt="Hélio dos Anjos, técnico do Náutico">
+                <h3>"Sempre admirei o futebol pernambucano", diz Hélio dos Anjos, técnico do Náutico</h3>
+                <p>Em entrevista exclusiva ao Diario de Pernambucano, o treinador do Náutico falou sobre momentos da
+                    atual temporada e projetou futuro no Timbu</p>
+                <a href="noticia.html" class="btn-leia">Ler mais</a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer id="rodape">
+        <p>&copy; 2025 Noticiando Pernambuco — Todos os direitos reservados.</p>
+        <p>contatos:
+            email: contato@noticiandopernambuco.com -
+            telefone: (81) 99999-9999
+        </p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="JS/main.js"></script>
+</body>
+
+</html>
